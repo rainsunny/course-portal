@@ -524,6 +524,9 @@ export const rlCourse: CourseInfo = {
 // 根据课程ID获取课程信息
 export function getCourseById(id: string): CourseInfo | undefined {
   const courses: Record<string, CourseInfo> = {
+    management: managementCourse,
+    business: businessCourse,
+    investment: investmentCourse,
     ml: mlCourse,
     rl: rlCourse,
   };
