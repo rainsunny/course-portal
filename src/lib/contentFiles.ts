@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 // 课程内容路径配置 - 支持多版本
+// 内容文件存放在项目的 content 目录下
 export const courseContentPaths: Record<string, {
   basePath: string;
   defaultVersion: string;
@@ -12,12 +13,12 @@ export const courseContentPaths: Record<string, {
   }>;
 }> = {
   management: {
-    basePath: '../ManagementCourse',
+    basePath: 'content/management',
     defaultVersion: 'v2',
     versions: {
       v2: {
         name: '第二版 (经典)',
-        path: '讲义_第二版',
+        path: 'v2',
         moduleFiles: {
           'module-1': '模块一_管理者的角色认知.md',
           'module-2': '模块二_目标管理与计划制定.md',
@@ -34,7 +35,7 @@ export const courseContentPaths: Record<string, {
       },
       v3: {
         name: '第三版 (进阶)',
-        path: '讲义_第三版',
+        path: 'v3',
         moduleFiles: {
           'module-1': '模块一_管理者的角色认知.md',
           'module-2': '模块二_目标管理与计划制定.md',
@@ -51,7 +52,7 @@ export const courseContentPaths: Record<string, {
       },
       v4: {
         name: '第四版 (最新)',
-        path: '讲义_第四版',
+        path: 'v4',
         moduleFiles: {
           'module-1': '模块一_管理者的角色认知.md',
           'module-2': '模块二_目标管理与计划制定.md',
@@ -69,12 +70,12 @@ export const courseContentPaths: Record<string, {
     }
   },
   business: {
-    basePath: '../BusinessCourse',
+    basePath: 'content/business',
     defaultVersion: 'v1',
     versions: {
       v1: {
         name: '第一版',
-        path: 'business_course',
+        path: 'v1',
         moduleFiles: {
           'day-1': '商业本质与思维_两周速成课_课程内容_上.md',
           'day-2': '商业本质与思维_两周速成课_课程内容_上.md',
@@ -90,7 +91,7 @@ export const courseContentPaths: Record<string, {
       },
       v2: {
         name: '第二版 (推荐)',
-        path: 'business_course_v2/lectures',
+        path: 'v2',
         moduleFiles: {
           'day-1': 'Day01_商业的第一性原理.md',
           'day-2': 'Day02_竞争优势的本质-护城河理论.md',
@@ -110,7 +111,7 @@ export const courseContentPaths: Record<string, {
       },
       v3: {
         name: '第三版',
-        path: 'business_course_v3',
+        path: 'v3',
         moduleFiles: {
           'day-1': '商业思维课程-Day1-2.md',
           'day-2': '商业思维课程-Day1-2.md',
@@ -127,38 +128,38 @@ export const courseContentPaths: Record<string, {
     }
   },
   investment: {
-    basePath: '../investment-course',
+    basePath: 'content/investment',
     defaultVersion: 'v1',
     versions: {
       v1: {
         name: '完整版',
-        path: 'modules',
+        path: 'v1',
         moduleFiles: {
-          'day-1': 'module-1/day-1-first-principles.md',
-          'day-2': 'module-1/day-2-asset-pricing.md',
-          'day-3': 'module-1/day-3-market-nature.md',
-          'day-4': 'module-2/day-4-asset-classes.md',
-          'day-5': 'module-2/day-5-dcf-valuation.md',
-          'day-6': 'module-2/day-6-relative-valuation.md',
-          'day-7': 'module-2/day-7-financial-statement.md',
-          'day-8': 'module-2/day-8-macro-industry.md',
-          'day-9': 'module-3/day-9-investment-philosophy.md',
-          'day-10': 'module-3/day-10-investment-strategies.md',
-          'day-11': 'module-3/day-11-decision-process.md',
-          'day-12': 'module-3/day-12-risk-management.md',
-          'day-13': 'module-4/day-13-behavioral-finance.md',
-          'day-14': 'module-4/day-14-comprehensive-application.md',
+          'day-1': 'day-1-first-principles.md',
+          'day-2': 'day-2-asset-pricing.md',
+          'day-3': 'day-3-market-nature.md',
+          'day-4': 'day-4-asset-classes.md',
+          'day-5': 'day-5-dcf-valuation.md',
+          'day-6': 'day-6-relative-valuation.md',
+          'day-7': 'day-7-financial-statement.md',
+          'day-8': 'day-8-macro-industry.md',
+          'day-9': 'day-9-investment-philosophy.md',
+          'day-10': 'day-10-investment-strategies.md',
+          'day-11': 'day-11-decision-process.md',
+          'day-12': 'day-12-risk-management.md',
+          'day-13': 'day-13-behavioral-finance.md',
+          'day-14': 'day-14-comprehensive-application.md',
         }
       }
     }
   },
   ml: {
-    basePath: '../ML_course',
+    basePath: 'content/ml',
     defaultVersion: 'v1',
     versions: {
       v1: {
         name: '完整版',
-        path: '',
+        path: 'v1',
         moduleFiles: {
           'day-1': 'Day1_Learning_Essence.md',
           'day-2': 'Day2_Linear_Model_Optimization.md',
@@ -179,12 +180,12 @@ export const courseContentPaths: Record<string, {
     }
   },
   rl: {
-    basePath: '../RL_Course',
+    basePath: 'content/rl',
     defaultVersion: 'v1',
     versions: {
       v1: {
         name: '完整版',
-        path: '',
+        path: 'v1',
         moduleFiles: {
           'day-1': '01_强化学习基础.md',
           'day-2': '02_价值函数与贝尔曼方程.md',
