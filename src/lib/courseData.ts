@@ -64,6 +64,16 @@ export const coursesMeta: CourseMeta[] = [
     color: 'orange',
     path: '/courses/rl',
   },
+  {
+    id: 'agent',
+    title: 'Agent 开发课程',
+    subtitle: '从第一性原理到实战应用',
+    description: '深入理解 Agent 的本质概念，掌握单 Agent 和多 Agent 系统的设计与实现，涵盖核心模式、工具设计、记忆管理等关键技术。',
+    duration: '7天',
+    icon: 'Cpu',
+    color: 'cyan',
+    path: '/courses/agent',
+  },
 ];
 
 // 管理学课程详细数据
@@ -521,6 +531,61 @@ export const rlCourse: CourseInfo = {
   ]
 };
 
+// Agent 开发课程详细数据
+export const agentCourse: CourseInfo = {
+  id: 'agent',
+  title: 'Agent 开发课程',
+  subtitle: '从第一性原理到实战应用',
+  description: '深入理解 Agent 的本质概念，掌握单 Agent 和多 Agent 系统的设计与实现',
+  duration: '7天',
+  icon: 'Cpu',
+  color: 'cyan',
+  modules: [
+    {
+      id: 'day-1',
+      title: 'Agent 的本质与核心概念',
+      duration: 'Day 1',
+      topics: ['Agent定义', 'Workflow vs Agent', 'Harness组件', '工具本质']
+    },
+    {
+      id: 'day-2',
+      title: '核心模式 - 工作流模式',
+      duration: 'Day 2',
+      topics: ['Augmented LLM', 'Prompt Chaining', 'Routing', 'Parallelization', 'Orchestrator-Workers']
+    },
+    {
+      id: 'day-3',
+      title: '完整的 Agent - 自主决策与执行',
+      duration: 'Day 3',
+      topics: ['Agent核心循环', 'ReAct模式', '规划与自我验证', 'Agent适用场景']
+    },
+    {
+      id: 'day-4',
+      title: '工具与 MCP',
+      duration: 'Day 4',
+      topics: ['工具设计原则', 'ACI设计', 'MCP协议', 'MCP Server实现']
+    },
+    {
+      id: 'day-5',
+      title: 'Memory 与 Context 管理',
+      duration: 'Day 5',
+      topics: ['记忆类型', 'Context Rot', '压缩策略', '长期记忆']
+    },
+    {
+      id: 'day-6',
+      title: '多 Agent 系统',
+      duration: 'Day 6',
+      topics: ['多Agent架构', 'OpenAI Swarm', '协作模式', '挑战与权衡']
+    },
+    {
+      id: 'day-7',
+      title: '实战项目与最佳实践',
+      duration: 'Day 7',
+      topics: ['开发原则', '项目实战', '调试技巧', '未来趋势']
+    }
+  ]
+};
+
 // 根据课程ID获取课程信息
 export function getCourseById(id: string): CourseInfo | undefined {
   const courses: Record<string, CourseInfo> = {
@@ -529,6 +594,7 @@ export function getCourseById(id: string): CourseInfo | undefined {
     investment: investmentCourse,
     ml: mlCourse,
     rl: rlCourse,
+    agent: agentCourse,
   };
   return courses[id];
 }

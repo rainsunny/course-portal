@@ -200,6 +200,25 @@ export const courseContentPaths: Record<string, {
         }
       }
     }
+  },
+  agent: {
+    basePath: 'content/agent',
+    defaultVersion: 'v1',
+    versions: {
+      v1: {
+        name: '完整版',
+        path: 'v1',
+        moduleFiles: {
+          'day-1': 'Day1_Agent_Basics.md',
+          'day-2': 'Day2_Workflows.md',
+          'day-3': 'Day3_Full_Agent.md',
+          'day-4': 'Day4_Tools_MCP.md',
+          'day-5': 'Day5_Memory_Context.md',
+          'day-6': 'Day6_Multi_Agent.md',
+          'day-7': 'Day7_Project_Practice.md',
+        }
+      }
+    }
   }
 };
 
