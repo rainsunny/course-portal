@@ -1,1 +1,6 @@
-export { default } from '@/components/MarkdownRenderer';
+export { default as Layout } from './Layout';
+export { default as Navigation } from './Navigation';
+export { default as Footer } from './Footer';
+export { default as MarkdownRenderer } from './MarkdownRenderer';
+export { default as ModuleHeader } from './ModuleHeader';
+export { default as CourseHeader } from './CourseHeader';

@@ -1,0 +1,1 @@
+export { useScrollHide } from './useScrollHide';
